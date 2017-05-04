@@ -1,0 +1,33 @@
+<ion-view view-title="Login" hide-nav-bar="true">
+  <!-- do you want padding? -->
+  <ion-content scroll="false">
+  <bligo-header>
+    <div class="bligo-header__wrapper">
+      <img src="img/logo_alta.png" class="welcome_bligo" />
+
+      <div class="bligo-header__titles">
+        <h1 class="bligo-header__title">BIENVENIDO A</h1>
+        <h2 class="bligo-header__title">BLIGO APP</h2>
+      </div>
+    </div>
+  </bligo-header>
+      <div class="welcome__phone">
+        <img src="img/the_distribuidor.png" class="the_phone" />
+        <input class="welcome__phone-input" ng-model="loginData.usuario" maxlength="100" type="text" placeholder="Usuario / Correo electrónico" />
+      </div>
+      <div class="welcome__phone">
+        <img src="img/the_clave.png" class="the_phone" />
+        <input class="welcome__phone-input disc" ng-model="loginData.clave" maxlength="50" type="text" placeholder="" />
+      </div>
+
+      <bligo-button>
+      <!--type="submit"-->
+      <p class="bligo__button-text">
+        <button class="bligo__button-next" ng-click="doLogin()">Ingresar</button>
+      </p>
+      </bligo-button>
+      <p class="welcome__instructions">{{abaTerrenoVersionGlo}}.{{abaTerrenoVersionVer}}.{{abaTerrenoVersionRev}} {{$root.abaTerrenoAmbiente}}</p>
+
+  </ion-content>
+</ion-view>
+
