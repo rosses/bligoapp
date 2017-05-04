@@ -98,18 +98,14 @@ angular.module('bligoapp.controllers', [])
         }
       },
       function (error) {
-          $rootScope.err("Error, es posible que su camara este en uso por otra aplicacion");
+          //$rootScope.err("Error, es posible que su camara este en uso por otra aplicacion");
       },
       {
           preferFrontCamera : false, 
           showFlipCameraButton : true, 
           showTorchButton : true, 
           torchOn: false, 
-          prompt : "El código debe quedar dentro de la zona demarcada", 
-          resultDisplayDuration: 0, 
-          formats : "QR_CODE,PDF_417,EAN_8,EAN_13,CODE_128,CODE_39,CODE_93", 
-          disableAnimations : true, // iOS
-          disableSuccessBeep: false // iOS
+          formats : "QR_CODE"
       }
    );
   };

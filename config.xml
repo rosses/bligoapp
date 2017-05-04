@@ -94,7 +94,9 @@
   <plugin name="phonegap-plugin-barcodescanner">
     <param name="CAMERA_USAGE_DESCRIPTION" value="Lector Abastible"/>
   </plugin>
-
+  
+  <icon src="icon.png" />
+  <splash src="splash.png" />
 
   <platform name="ios">
 
