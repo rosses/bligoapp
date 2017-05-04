@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.bligoeventos.app" version="0.4.9" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget id="com.bligoeventos.app" version="0.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
   <name>Bligo Eventos</name>
   <description>
         Aplicación Bligo Eventos
@@ -30,7 +30,7 @@
   <preference name="permissions" value="none"/>
   <preference name="Orientation" value="portrait" />
 
-  <preference name="StatusBarOverlaysWebView" value="false" />
+  <preference name="StatusBarOverlaysWebView" value="true" />
   <preference name="StatusBarStyle" value="lightcontent" />
 
   <preference name="android-build-tool" value="gradle" />
