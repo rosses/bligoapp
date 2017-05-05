@@ -66,7 +66,7 @@ angular.module('bligoapp.controllers', [])
 
 
             $rootScope.showload('validando QR...');
-            var data = {'action':'validar_qr', 'qr': result.text };
+            var data = {'action':'validar_qr', 'qr': result.text, 'lector': $localStorage.BligoApp.id };
             $http.post(rest, data).
             then(function (data, status, headers, config) {
               $rootScope.hideload();
