@@ -92,7 +92,7 @@
   <plugin name="cordova-plugin-appavailability" />
 
   <plugin name="phonegap-plugin-barcodescanner">
-    <param name="CAMERA_USAGE_DESCRIPTION" value="Lector Abastible"/>
+    <param name="CAMERA_USAGE_DESCRIPTION" value="Lector BligoEventos"/>
   </plugin>
 
   <icon src="icon.png" />
