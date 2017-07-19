@@ -46,7 +46,7 @@
   <plugin name="org.apache.cordova.globalization"/>
   <plugin name="org.apache.cordova.inappbrowser"/>
   <plugin name="org.apache.cordova.dialogs"/>
-  <plugin name="org.apache.cordova.camera"/>
+  
   <!--
   <plugin name="cordova-plugin-media-capture" source="npm" spec="*">
   <variable name="CAMERA_USAGE_DESCRIPTION" value="App would like to access the camera." />
@@ -82,7 +82,7 @@
     <allow-intent href="itms:*"/>
     <allow-intent href="itms-apps:*"/>
   </platform>
-
+  <plugin name="cordova-plugin-camera" />
   <plugin name="cordova-plugin-device"/>
   <plugin name="cordova-plugin-statusbar" />
   <plugin name="cordova-custom-config" />
