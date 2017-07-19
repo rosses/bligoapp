@@ -291,7 +291,7 @@ Number.prototype.padLeft = function(base,chr){
 document.addEventListener("deviceready", onDeviceReadyPG, false);
 
 function onDeviceReadyPG() {
-  cordova.plugins.backgroundMode.enable();
+  //cordova.plugins.backgroundMode.enable();
   setTimeout(function() {
     //alert(JSON.stringify(navigator.splashscreen));
     navigator.splashscreen.hide();
