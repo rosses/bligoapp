@@ -53,6 +53,8 @@
   <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="App would like to access the library." />
   </plugin>
   -->
+  <!--<plugin name="cordova-plugin-camera" />-->
+
   <feature name="Camera">
       <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
   </feature>
@@ -81,7 +83,7 @@
     <allow-intent href="itms:*"/>
     <allow-intent href="itms-apps:*"/>
   </platform>
-  <plugin name="cordova-plugin-camera" spec="2.4.1" />
+
   <plugin name="cordova-plugin-device"/>
   <plugin name="cordova-plugin-statusbar" />
   <plugin name="cordova-custom-config" />
