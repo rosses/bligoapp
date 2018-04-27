@@ -22,31 +22,37 @@
     </ion-header-bar>
     <ion-content>
       <div class="text-center side">
-        <img src="{{bligoapp.foto == '' || bligoapp.foto.indexOf('sinfoto') !== -1 ? 'img/default_avatar.png' : app.foto}}" class="perfil_foto" />
+        <img src="{{$root.bligoapp.avatar == '' ? 'img/default_avatar.png' : $root.bligoapp.avatar}}" class="perfil_foto" />
         <br /><br />
         <h6>Nombre</h6>
-        <div class="perfil_camion">{{bligoapp.nombre}}</div>
+        <div class="perfil_camion">{{$root.bligoapp.nombre}}</div>
         <h6>Correo Electrónico</h6>
-        <div class="perfil_nombre">{{bligoapp.correo}}</div>
+        <div class="perfil_nombre">{{$root.bligoapp.correo}}</div>
       </div>
       <ion-list>
-        <!--
-        <ion-item menu-close>
-          Cambiar mi foto
-        </ion-item>
-        <ion-item menu-close>
-          Cambiar mi clave
-        </ion-item>
         
-        <ion-item menu-close href ng-click="gotoPrintConfig();">
-          Impresora
-        </ion-item>
-        -->
+        <br />
+        <div class="text-center" menu-close>
+          <a href ng-click="doProfile();">
+            Modificar mi perfil
+          </a>
+        </div>
+        <br /> 
+
+        
+        <div class="text-center lateral_links">
+          <a href ng-click="doHome();">
+            Home
+          </a>
+        </div>  
+        <br /> 
         <div class="text-center lateral_links">
           <a href ng-click="$root.cerrarSesion();">
             Cerrar sesión
           </a>
         </div>
+
+
         </div>
         
       </ion-list>
@@ -64,7 +70,7 @@
           <b>Versión</b>
         </div>
         <ion-item>
-          0.1
+          1.2.1
         </ion-item>
       </ion-list>
       

@@ -1,5 +1,5 @@
 isCordovaApp = !!window.cordova;
-rest = "http://www.bligoeventos.com/sistema/ws.php";
+rest = "http://www.lacompania.cl/sistema/ws.php";
 
 function err(msg) {
   console.log(msg);

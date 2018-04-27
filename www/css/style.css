@@ -378,7 +378,7 @@ h2 {
 }
 .lateral_links { 
 	padding-top: 20px; 
-	border-top: 1px solid #ddd;
+	/*border-top: 1px solid #ddd;*/
 }
 .lateral_links a { 
     color: #FFFFFF;
@@ -644,6 +644,204 @@ h2.bligo-header__title {
   max-width: 120px;
   max-height: 100%;
 }
+.button-bligo, .button-bligo:hover {
+	color: #FFF;
+}
+.button-bligo:active {
+	color: #FFF;
+	background-color: #96373a;
+}
+
+
+.homeclass-form__profile {
+  background: #fff;
+  padding: 100px 30px 20px 30px;
+}
+.homeclass-form__input {
+margin-top: 10px !important;
+margin-bottom: 25px !important;
+padding-right: 35px;
+width: 100%;
+}
+
+.homeclass-form__select {
+width: 100% !important;
+margin: 0 auto 25px auto !important;
+}
+
+homeclass-button {
+width: 100% !important;
+}
+.homeclass-form__input {
+  margin: 15px auto !important;
+  border: 1px solid #C4D4DA !important;
+  width: 100%;
+  color: #89A3AE !important;
+  height: 45px !important;
+  padding-left: 15px !important;
+  padding-right: 10px;
+}
+.homeclass-form__input2 {
+  margin: 15px auto !important;
+  width: 90%;
+  color: #89A3AE !important;
+  height: 45px !important;
+  padding-left: 15px !important;
+  padding-right: 10px;
+}
+
+.homeclass-form__check {
+  border: 0 !important;
+  margin: 0;
+  color: #89A3AE;
+  font-size: 1rem;
+  padding-left: 50px;
+}
+
+::-webkit-input-placeholder {
+  color: #89A3AE !important;
+}
+
+:-moz-placeholder {
+  color: #89A3AE !important;
+}
+
+::-moz-placeholder {
+  color: #89A3AE !important;
+}
+
+:-ms-input-placeholder {
+  color: #89A3AE !important;
+}
+
+
+homeclass-header-profile {
+  display: block;
+  height: 145px;
+  background: #49C0BB;
+}
+
+div.homeclass-header-profile {
+  display: block;
+  height: 145px;
+  background: #49C0BB;
+}
+
+.header-profile__wrapper {
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.header-profile__overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+.popup {
+	min-width: 90%;
+}
+
+.header-profile__avatar {
+  height: 180px;
+  width: 180px;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px 0 rgba(157,157,157,0.50);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 56px;
+}
+
+.header-profile__edit {
+  height: 35px;
+  width: 35px;
+  background: #9DC10E;
+  position: absolute;
+  right: 14px;
+  bottom: 0;
+  border: 0;
+  border-radius: 50%;
+}
+
+.header-profile__icon-pencil {
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+}
+
+.header-profile__topbar {
+  width: 100%;
+  position: relative;
+  padding-top: 14px;
+}
+
+.header-profile__title {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+}
+
+.header-profile__left-button {
+  left: 21px;
+  top: 21px
+}
+
+.header-profile__right-button {
+  position: absolute;
+  top: 15px;
+  right: 22px;
+}
+
+
+.profile__input-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.profile__form-pencil {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+.profile__add {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.profile__add-select {
+  position: relative;
+}
+
+.profile__chevron {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  font-size: 1.8rem;
+  color: #89A3AE;
+}
+
+ 
+
 
 @media (max-height: 480px) {
   bligo-header {

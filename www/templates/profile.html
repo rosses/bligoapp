@@ -1,0 +1,56 @@
+<ion-view view-title="Perfil">
+  <ion-content>
+  <div class="homeclass-header-profile">
+    <div class="header-profile__wrapper">
+      <div class="header-profile__overlay">
+
+        <div class="header-profile__topbar">
+          <div class="homeclass__navbar-left header-profile__left-button">
+            <hamburger menu-toggle="left"></hamburger>
+          </div>
+
+          <div class="header-profile__right-button">
+            <bell></bell>
+          </div>
+        </div>
+
+        <div class="header-profile__avatar" ng-style="getBackgroundStyle(avatar)">
+          <button class="header-profile__edit" ng-click="setImage();">
+            <svg width="17" height="16" viewBox="0 0 17 16" class="header-profile__icon-pencil">
+              <path d="M14.96 1.04c-1.37-1.38-3.6-1.38-5 0L.82 10.2c-.06.06-.1.15-.12.25L0 15.48c-.02.14.04.28.13.38.1.1.2.14.33.14h.06l3.03-.4c.25-.05.43-.28.4-.53-.04-.25-.27-.43-.53-.4L1 15l.47-3.5 3.7 3.68c.07.1.2.14.3.14.13 0 .25-.05.34-.14l9.17-9.15c.67-.67 1.04-1.55 1.04-2.5 0-.94-.36-1.83-1.03-2.5zm-4.8 1.12l1.52 1.54-8.35 8.35-1.54-1.53 8.34-8.36zM5.48 14.2l-1.52-1.5 8.36-8.35 1.5 1.5L5.5 14.2zm8.98-9L10.8 1.52c.47-.4 1.05-.6 1.67-.6.7 0 1.35.27 1.85.76.5.5.76 1.15.76 1.85 0 .62-.2 1.2-.6 1.67z" fill="#FFF" fill-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="homeclass-form__profile">
+      <label class="homeclass-form__label">Nombre</label>
+      <div class="profile__input-wrapper">
+        <input class="homeclass-form__input" ng-model="yo.nombre" type="text" placeholder="Nombre">
+        <img class="profile__form-pencil" src="img/form-pencil.svg" />
+      </div>
+
+      <label class="homeclass-form__label">Correo Electronico</label>
+      <div class="profile__input-wrapper">
+        <input class="homeclass-form__input" ng-model="yo.correo" type="email" placeholder="Correo Electronico">
+        <img class="profile__form-pencil" src="img/form-pencil.svg" />
+      </div>
+
+      <label class="homeclass-form__label">Contraseña</label>
+      <div class="profile__input-wrapper">
+        <input class="homeclass-form__input" ng-model="yo.pass" type="password" placeholder="Ingrese solo para cambiar">
+        <img class="profile__form-pencil" src="img/form-pencil.svg" />
+      </div>
+
+      <bligo-button>
+      <p class="bligo__button-text">
+        <button class="bligo__button-next" ng-click="saveProfile()">Guardar</button>
+      </p>
+      </bligo-button>
+
+      <br /><br />
+
+    </div>
+  </ion-content>
+</ion-view>

@@ -125,13 +125,27 @@ angular.module('bligoapp', ['ngCordova', 'base64', 'angular-websql', 'ionic', 'b
     templateUrl: 'templates/login.html',
     controller: 'LoginCtrl'
   })
+  .state('register', {
+    url: '/register',
+    cache: false,
+    templateUrl: 'templates/register.html',
+    controller: 'RegisterCtrl'
+  })
   .state('main', {
     url: '/main',
     abstract: true,
     templateUrl: 'templates/main.html',
     controller: 'MainCtrl'
   })
-
+  .state('main.profile', {
+    url: '/profile',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/profile.html',
+        controller: 'ProfileCtrl'
+      }
+    }
+  })
   .state('main.home', {
     url: '/home',
     views: {
