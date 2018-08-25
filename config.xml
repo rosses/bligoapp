@@ -26,7 +26,6 @@
   <preference name="FadeSplashScreen" value="false"/>
 
 
-  <preference name="android-minSdkVersion" value="23"/>
   <preference name="BackupWebStorage" value="none"/>
   <preference name="permissions" value="none"/>
   <preference name="Orientation" value="portrait" />
@@ -70,7 +69,7 @@
   <plugin spec="https://rosses@github.com/rosses/cordova-plugin-splashscreen.git" source="git" />
 
   <preference name="android-targetSdkVersion" value="27" />
-  <preference name="android-minSdkVersion" value="14" />
+  <preference name="android-minSdkVersion" value="20" />
   <preference name="exit-on-suspend" value="false"/>
   <preference name="android-windowSoftInputMode" value="stateHidden|adjustResize" />
   <preference name="KeyboardShrinksView" value="true" />
