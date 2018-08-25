@@ -264,59 +264,88 @@ angular.module('bligoapp.controllers', [])
   $scope.leer_qr = function() {
 
    $scope.modalData = { staffID: 0, staffName: '', evento: '' };
-
-   cordova.plugins.barcodeScanner.scan(
-      function (result) {
-        if (result.cancelled == 1) {
-          // Cancelado por el usuario
-        }
-        else {
-          if (result.format == "QR_CODE") { 
-
-
-            $rootScope.showload('validando QR...');
-            var data = {'action':'validar_qr', 'qr': result.text, 'lector': $localStorage.BligoApp.id };
-            $http.post(rest, data).
-            then(function (data, status, headers, config) {
-              $rootScope.hideload();
-              if (data.data.res == 'OK') { 
-
-                $scope.modalData = { staffID: data.data.staffID, staffName: data.data.staffName, evento: data.data.evento };
-
-                $ionicModal.fromTemplateUrl('templates/QR.html', {
-                  scope: $scope,
-                  animation: 'slide-in-right'
-                }).then(function(modal) {
-                  $scope.modalOK = modal;
-                  $scope.modalOK.show();
-                });
-              }
-              else {
-                $rootScope.err(data.data.msg);
-              }
-            },
-            function (data, status, headers, config) { 
-              $rootScope.showload();
-              $rootScope.err();
-            });
-
+   if (window.cordova) {
+     cordova.plugins.barcodeScanner.scan(
+        function (result) {
+          if (result.cancelled == 1) {
+            // Cancelado por el usuario
           }
           else {
-            $rootScope.err('El código escaneado no corresponde a un QR');
+            if (result.format == "QR_CODE") { 
+
+
+              $rootScope.showload('validando QR...');
+              var data = {'action':'validar_qr', 'qr': result.text, 'lector': $localStorage.BligoApp.id };
+              $http.post(rest, data).
+              then(function (data, status, headers, config) {
+                $rootScope.hideload();
+                if (data.data.res == 'OK') { 
+
+                  $scope.modalData = { staffID: data.data.staffID, staffName: data.data.staffName, evento: data.data.evento };
+
+                  $ionicModal.fromTemplateUrl('templates/QR.html', {
+                    scope: $scope,
+                    animation: 'slide-in-right'
+                  }).then(function(modal) {
+                    $scope.modalOK = modal;
+                    $scope.modalOK.show();
+                  });
+                }
+                else {
+                  $rootScope.err(data.data.msg);
+                }
+              },
+              function (data, status, headers, config) { 
+                $rootScope.showload();
+                $rootScope.err();
+              });
+
+            }
+            else {
+              $rootScope.err('El código escaneado no corresponde a un QR');
+            }
           }
+        },
+        function (error) {
+            //$rootScope.err("Error, es posible que su camara este en uso por otra aplicacion");
+        },
+        {
+            preferFrontCamera : false, 
+            showFlipCameraButton : true, 
+            showTorchButton : true, 
+            torchOn: false, 
+            formats : "QR_CODE"
+        }
+     );
+   }
+   else {
+      $rootScope.showload('validando QR...');
+      var data = {'action':'validar_qr', 'qr': "http://www.lacompania.cl/sistema/validador.php?token=9bf31c7ff062936a96d3c8bd1f8f2ff3&type=cortesia", 'lector': $localStorage.BligoApp.id };
+      $http.post(rest, data).
+      then(function (data, status, headers, config) {
+        $rootScope.hideload();
+        if (data.data.res == 'OK') { 
+
+          $scope.modalData = { staffID: data.data.staffID, staffName: data.data.staffName, evento: data.data.evento };
+
+          $ionicModal.fromTemplateUrl('templates/QR.html', {
+            scope: $scope,
+            animation: 'slide-in-right'
+          }).then(function(modal) {
+            $scope.modalOK = modal;
+            $scope.modalOK.show();
+          });
+        }
+        else {
+          $rootScope.err(data.data.msg);
         }
       },
-      function (error) {
-          //$rootScope.err("Error, es posible que su camara este en uso por otra aplicacion");
-      },
-      {
-          preferFrontCamera : false, 
-          showFlipCameraButton : true, 
-          showTorchButton : true, 
-          torchOn: false, 
-          formats : "QR_CODE"
-      }
-   );
+      function (data, status, headers, config) { 
+        $rootScope.showload();
+        $rootScope.err();
+      });
+   }
+
   };
 
   $scope.$on('modal.hidden', function(e) {
